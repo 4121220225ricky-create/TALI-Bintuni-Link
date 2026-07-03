@@ -1,10 +1,10 @@
 <!--
-  TALI — Transparansi Tautan Lokal Industri
+  TALI (Transparansi Tautan Lokal Industri)
   Dokumen kerja interaktif · Pilar 3 skema Bintuni Link
   Kabupaten Teluk Bintuni, Provinsi Papua Barat
-  Peneliti: Ricky Dina Rajendra · Versi 0.4 (prototipe pra-implementasi)
+  Dikembangkan oleh: Ricky Dina Rajendra
 
-  KONVENSI KEJUJURAN DATA
+  CATATAN
   [D] data terverifikasi dari sumber resmi yang dirujuk pada Bagian 07
   [S] keluaran simulasi atau model dengan asumsi yang dapat diubah pengguna
   [K] kerangka hukum dan kelembagaan yang perinciannya perlu verifikasi lanjutan
@@ -16,7 +16,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>TALI · Bintuni Link Benefit Dashboard — WP/03/2026</title>
+<title>TALI : Bintuni Link Benefit Dashboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
@@ -342,7 +342,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <use href="#logoTali"/>
   </svg>
   <div class="wordmark">TA<i>LI</i></div>
-  <div class="tb-doc">WP/03/2026 · v0.6<br>Bintuni Link</div>
+  <div class="tb-doc">Beta version<br>Bintuni Link</div>
   <div class="tb-prog"><i></i></div>
 </div>
 
@@ -371,19 +371,19 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         <div class="wordmark">TA<i>LI</i></div>
       </div>
     </div>
-    <div class="docid">Dokumen kerja<br>WP/03/2026 · Versi 0.6<br>Prototipe pra-implementasi</div>
+    <div class="docid">Dokumen kerja<br>Prototipe pra-implementasi</div>
   </div>
   <div class="rail-toc" id="toc">
-    <a href="#s1" data-s="s1"><span class="no">01</span>Konteks dan kesenjangan</a>
-    <a href="#s2" data-s="s2"><span class="no">02</span>Diagnosis aliran nilai</a>
-    <a href="#s3" data-s="s3"><span class="no">03</span>Arsitektur kebijakan</a>
-    <a href="#s4" data-s="s4"><span class="no">04</span>Laboratorium fiskal</a>
-    <a href="#s5" data-s="s5"><span class="no">05</span>Jalur implementasi</a>
-    <a href="#s6" data-s="s6"><span class="no">06</span>Kamus indikator</a>
-    <a href="#s7" data-s="s7"><span class="no">07</span>Sumber dan batasan</a>
+    <a href="#s1" data-s="s1"><span class="no">01</span>Konteks dan Kesenjangan</a>
+    <a href="#s2" data-s="s2"><span class="no">02</span>Diagnosis Aliran Nilai</a>
+    <a href="#s3" data-s="s3"><span class="no">03</span>Arsitektur Kebijakan</a>
+    <a href="#s4" data-s="s4"><span class="no">04</span>Laboratorium Fiskal</a>
+    <a href="#s5" data-s="s5"><span class="no">05</span>Jalur Implementasi</a>
+    <a href="#s6" data-s="s6"><span class="no">06</span>Kamus Indikator</a>
+    <a href="#s7" data-s="s7"><span class="no">07</span>Sumber dan Batasan</a>
   </div>
   <div id="progress"><i></i></div>
-  <div class="rail-foot">R.D. Rajendra<br>Papedanomics 2026<br>Kab. Teluk Bintuni</div>
+  <div class="rail-foot">Ricky Dina R<br>Papedanomics 2026<br>Kab. Teluk Bintuni</div>
 </nav>
 
 <div id="page">
@@ -394,14 +394,13 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <div class="mast-meta">
       <span>Dokumen kerja · <b>bukan publikasi resmi</b></span>
       <span>Konvensi data <b>[D]</b> terverifikasi · <b>[S]</b> simulasi · <b>[K]</b> kerangka hukum</span>
-      <span>Juli 2026</span>
     </div>
     <div class="hero-grid">
       <div>
-        <h1>Mengikat nilai yang selama ini <em>lewat begitu saja</em></h1>
+        <h1>Mengikat Nilai Yang Selama Ini <em>Terlewat Begitu Saja</em></h1>
         <p class="mast-abs">
-          <span class="lede">TALI adalah instrumen pemantauan yang diusulkan sebagai Pilar 3 skema Bintuni Link.</span>
-          Dokumen interaktif ini menyajikan diagnosis, arsitektur kelembagaan, dan simulasi fiskal dari satu pertanyaan kebijakan. Ketika investasi hilirisasi gas bernilai miliaran dolar masuk ke Teluk Bintuni, mekanisme apa yang memastikan belanja proyek, tenaga kerja, dan penerimaan migas benar-benar berubah menjadi kapasitas usaha lokal dan aset fiskal lintas generasi, bukan sekadar melintas di atasnya.
+          <span class="lede">TALI (Transparansi Tautan Lokal Industri) adalah instrumen pemantauan yang diusulkan sebagai platform pendukung skema Bintuni Link.</span>
+          Platform interaktif ini menyajikan diagnosis, arsitektur kelembagaan, dan simulasi fiskal dari satu pertanyaan kebijakan. Ketika investasi hilirisasi gas bernilai miliaran dolar masuk ke Teluk Bintuni, mekanisme apa yang memastikan belanja proyek, tenaga kerja, dan penerimaan migas benar-benar berubah menjadi kapasitas usaha lokal dan aset fiskal lintas generasi, bukan sekadar melintas di atasnya.
         </p>
       </div>
       <svg class="hero-ill" viewBox="0 0 220 250" fill="none" aria-hidden="true">
@@ -457,7 +456,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 <section id="s1">
   <div class="wm">01</div>
   <div class="sec-rule"><span class="no">01</span><span class="lbl">Konteks dan kesenjangan skala</span></div>
-  <h2>Kemiskinan turun sembilan poin dalam satu dekade, sementara satu proyek saja membawa lebih dari satu miliar dolar</h2>
+  <h2>Kemiskinan Turun 9 Poin Dalam Satu Dekade, Sementara 1 Proyek Saja Membawa Lebih Dari 1 Miliar Dolar</h2>
   <p class="lead">Dua besaran ini tidak dapat dijumlahkan secara statistik, tetapi sah dibaca berdampingan sebagai indikasi kesenjangan skala. Perbaikan kesejahteraan memang berjalan, namun jauh lebih lambat daripada laju kapital yang mengalir masuk ke wilayah yang sama. Seluruh angka pada bagian ini berstatus <span class="mk mk-d">[D]</span> dan dirujuk pada Bagian 07.</p>
 
   <div class="duo">
@@ -475,7 +474,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
           <span class="gap-val">25,34%</span>
         </div>
       </div>
-      <div class="fig-note">Penurunan sekitar 9,4 poin persentase dalam sepuluh tahun menurut BPS Papua Barat yang dipublikasikan Databoks dengan posisi data 30 November 2025.<sup class="fn">1</sup> Hanya dua titik waktu yang ditampilkan karena hanya itu yang terverifikasi konsisten, sehingga garis interpolasi tahunan sengaja tidak digambar.</div>
+      <div class="fig-note">Penurunan sekitar 9,4 poin persentase dalam sepuluh tahun menurut BPS Papua Barat (2025).<sup class="fn">1</sup> Hanya dua titik waktu yang ditampilkan karena hanya itu yang terverifikasi konsisten, sehingga garis interpolasi tahunan tidak digambar.</div>
     </div>
 
     <div class="fig">
@@ -484,7 +483,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
         <div class="big-figure">US$1,2<small> miliar</small></div>
         <table class="ledger">
           <tr><td>Tangguh LNG, operator</td><td>BP (eksisting)</td></tr>
-          <tr><td>Blok Kasuri, operator</td><td>Genting Oil · target 2027</td></tr>
+          <tr><td>Blok Kasuri, operator</td><td>Genting Oil</td></tr>
           <tr><td>Blue ammonia, status</td><td>Studi kelayakan pasca-MoU<sup class="fn">2</sup></td></tr>
           <tr><td>Target konstruksi</td><td>2026</td></tr>
           <tr><td>Target on-stream</td><td>2030 · 875 rb ton/th<sup class="fn">3</sup></td></tr>
@@ -498,7 +497,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 <section id="s2">
   <div class="wm">02</div>
   <div class="sec-rule"><span class="no">02</span><span class="lbl">Diagnosis aliran nilai</span></div>
-  <h2>Anatomi ekonomi enklave, digambar sebagai aliran</h2>
+  <h2>Anatomi Ekonomi Enklave: Digambarkan Sebagai Aliran</h2>
   <p class="lead">Diagram berikut adalah ilustrasi proporsi kualitatif dari pola umum proyek ekstraktif skala besar di Indonesia dan berstatus <span class="mk mk-s">[S]</span>. Diagram ini bukan pengukuran arus kas aktual Teluk Bintuni karena data pengadaan dan ketenagakerjaan per paket belum tersedia sebelum Bintuni Link berjalan. Fungsinya adalah alat berpikir, bukan bukti statistik.</p>
 
   <div class="sankey-shell">
@@ -514,7 +513,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 <section id="s3">
   <div class="wm">03</div>
   <div class="sec-rule"><span class="no">03</span><span class="lbl">Arsitektur kebijakan</span></div>
-  <h2>Tiga pilar dalam satu rantai sebab akibat</h2>
+  <h2>Tiga Pilar Dalam 1 Rantai Sebab Akibat</h2>
   <p class="lead">Pilar pertama mengunci nilai pada titik transaksi. Pilar kedua mengonversi penerimaan yang telah terealisasi menjadi aset lintas generasi. Pilar ketiga membuat keduanya dapat diaudit publik. Matriks kewenangan di bawahnya menjawab kritik paling umum terhadap gagasan serupa, yaitu siapa sebenarnya yang berwenang melakukan apa. Pemetaan berstatus <span class="mk mk-k">[K]</span>.</p>
 
   <div class="arch">
@@ -535,13 +534,13 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
     <div class="arch-col a3">
       <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
       <span class="ordo">PILAR III</span>
-      <h3>TALI · Benefit Dashboard</h3>
-      <p>Instrumen yang sedang Anda baca. Sistem ini mengintegrasikan tiga lapis data yang meliputi pengadaan dan kontraktor, ketenagakerjaan, serta rumah tangga melalui DTSEN dan BPS, untuk memantau apakah manfaat benar-benar sampai dan memberi dasar koreksi kebijakan tahunan.</p>
+      <h3>TALI sebagai Benefit Dashboard</h3>
+      <p>Platform ini mengintegrasikan tiga lapis data yang meliputi pengadaan dan kontraktor, ketenagakerjaan, serta rumah tangga melalui DTSEN dan BPS, untuk memantau apakah manfaat benar-benar sampai dan memberi dasar koreksi kebijakan tahunan.</p>
       <div class="fx">MENGAWASI distribusi manfaat, terbuka untuk audit publik</div>
     </div>
   </div>
 
-  <div class="scroll-hint">Geser tabel ke samping pada layar sempit →</div>
+  <div class="scroll-hint">Geser tabel ke samping pada layar handphone Anda →</div>
   <div class="raci-wrap">
     <table class="raci">
       <tr>
@@ -560,12 +559,12 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 <section id="s4">
   <div class="wm">04</div>
   <div class="sec-rule"><span class="no">04</span><span class="lbl">Laboratorium fiskal dana abadi</span></div>
-  <h2>Tiga skenario dengan satu disiplin, hanya membelanjakan hasil dan tidak pernah menyentuh pokok</h2>
+  <h2>Tiga Skenario Dengan 1 Disiplin, Hanya Membelanjakan Hasil Dan Tidak Pernah Menyentuh Pokok</h2>
   <p class="lead">Model di bawah menghitung saldo Dana Abadi Transformasi pada tiga skenario penerimaan sekaligus, yaitu rendah, moderat, dan tinggi, alih-alih satu proyeksi optimistis. Seluruh keluaran berstatus <span class="mk mk-s">[S]</span> dan tidak boleh dikutip sebagai proyeksi resmi APBD. Formulanya adalah saldo tahun berjalan sama dengan saldo tahun sebelumnya dikali satu tambah imbal hasil, lalu ditambah setoran tahunan yang merupakan hasil kali penerimaan terealisasi dan tarif setor.</p>
 
   <div class="lab">
     <div class="lab-head">
-      <span class="t">Simulator tiga skenario</span>
+      <span class="t">Simulator Tiga Skenario</span>
       <span class="m">Skenario rendah 0,6× moderat · tinggi 1,5× moderat</span>
     </div>
     <div class="lab-grid">
@@ -607,7 +606,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 <section id="s5">
   <div class="wm">05</div>
   <div class="sec-rule"><span class="no">05</span><span class="lbl">Jalur implementasi 2027–2035</span></div>
-  <h2>Urutan yang disiplin, kelembagaan dahulu, dana kemudian, ekspansi terakhir</h2>
+  <h2>Urutan Disiplin: Kelembagaan, Dana, Ekspansi</h2>
   <p class="lead">Target berikut adalah rancangan awal yang akan dikalibrasi terhadap baseline aktual begitu unit pelaksana terbentuk, bukan komitmen anggaran yang telah disetujui. Status pemetaan adalah <span class="mk mk-k">[K]</span>.</p>
 
   <div class="scroll-hint">Geser linimasa ke samping pada layar sempit →</div>
@@ -625,8 +624,8 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 
 <section id="s6">
   <div class="wm">06</div>
-  <div class="sec-rule"><span class="no">06</span><span class="lbl">Kamus indikator</span></div>
-  <h2>Definisi operasional yang ditulis sebelum datanya ada</h2>
+  <div class="sec-rule"><span class="no">06</span><span class="lbl">Glosarium Indikator</span></div>
+  <h2>Definisi operasional yang ditulis sebelum pengumpulan data</h2>
   <p class="lead">Menetapkan formula pengukuran sebelum implementasi mencegah indikator dibengkokkan mengikuti hasil. Seluruh kartu bernilai kosong hari ini dan baru terisi setelah sistem pelaporan Compact berjalan.</p>
 
   <div class="defs">
@@ -659,8 +658,8 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
 
 <section id="s7">
   <div class="wm">07</div>
-  <div class="sec-rule"><span class="no">07</span><span class="lbl">Sumber dan batasan</span></div>
-  <h2>Setiap angka punya alamat, dan yang tidak punya diberi label</h2>
+  <div class="sec-rule"><span class="no">07</span><span class="lbl">Sumber dan Batasan</span></div>
+  <h2>Setiap Angka Terdapat Alamat, Dan Yang Tidak Punya Diberi Label</h2>
 
   <div class="srcs">
     <div class="src-item"><span><span class="badge mk-d">D</span>Kemiskinan Teluk Bintuni 25,34% dengan posisi data 30 November 2025 beserta perbandingan satu dekade bersumber dari BPS Provinsi Papua Barat yang dipublikasikan Databoks Katadata pada Januari 2026.</span></div>
@@ -673,13 +672,12 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;border-radius:50%;bac
   </div>
 
   <div class="caveat">
-    <h4>Batasan yang diakui secara eksplisit</h4>
-    <p>Prototipe ini belum memuat data pengadaan lokal, ketenagakerjaan per paket, maupun arus kas PI dan DBH aktual, karena instrumen kelembagaan yang menghasilkan data tersebut justru adalah objek yang sedang diusulkan. Proporsi pada diagram aliran adalah ilustrasi kualitatif dan bukan estimasi ekonometrik. Angka kemiskinan ekstrem sengaja tidak digunakan karena inkonsistensi antarpemberitaan 2025 sampai 2026 belum terselesaikan pada publikasi resmi BPS. Seluruh simulasi mengabaikan inflasi biaya pengelolaan dana dan risiko tata kelola seperti elite capture, dua hal yang dibahas sebagai risiko implementasi pada naskah utama karya tulis.</p>
+    <h4>Batasan Platform</h4>
+    <p>Platform ini belum memuat data pengadaan lokal, ketenagakerjaan per paket, maupun arus kas PI dan DBH aktual, karena instrumen kelembagaan yang menghasilkan data tersebut justru adalah objek yang sedang diusulkan. Proporsi pada diagram aliran adalah ilustrasi kualitatif dan bukan estimasi ekonometrik. Angka kemiskinan ekstrem sengaja tidak digunakan karena inkonsistensi antarpemberitaan 2025 sampai 2026 belum terselesaikan pada publikasi resmi BPS. Seluruh simulasi mengabaikan inflasi biaya pengelolaan dana dan risiko tata kelola seperti elite capture, dua hal yang dibahas sebagai risiko implementasi pada naskah utama karya tulis.</p>
   </div>
 
   <footer id="colophon">
-    <div><b>TALI</b> · Transparansi Tautan Lokal Industri<br>Pilar 3 skema Bintuni Link · dokumen kerja interaktif<br>Ricky Dina Rajendra · Papedanomics 2026</div>
-    <div>Tipografi Montserrat dan Poppins<br>Dibangun tanpa peta karena argumen intinya mekanisme, bukan geografi<br>WP/03/2026 · v0.6 · Juli 2026</div>
+    <div><b>TALI</b> (Transparansi Tautan Lokal Industri)<br>Ricky Dina Rajendra</div>
   </footer>
 </section>
 
